@@ -3,48 +3,6 @@ FORMAT: 1A
 # NIFD CMS API
 Notes API is a *short texts saving* service similar to its physical paper presence on your table.
 
-# Group Notes
-Notes related resources of the **NIFD CMS API**
-
-## Notes Collection [/notes]
-### List all Notes [GET]
-+ Response 200 (application/json)
-
-        [{
-          "title": "mytitle", "pic": "http://www.mimg/com","date":"2015.09.09"
-        }, {
-          "title": "mytitle", "pic": "http://www.mimg/com","date":"2015.09.09"
-        }]
-
-### Create a Note [POST]
-+ Request (application/json)
-
-        { "title": "Buy cheese and bread for breakfast." }
-
-+ Response 201 (application/json)
-
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
-
-## Note [/notes/{id}]
-A single Note object with all its details
-
-+ Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
-
-### Retrieve a Note [GET]
-+ Response 200 (application/json)
-
-    + Header
-
-            X-My-Header: The Value
-
-    + Body
-
-            { "id": 2, "title": "Pick-up posters from post-office" }
-
-### Remove a Note [DELETE]
-+ Response 204
-
 # Group Media
 ## Media Collection [/media/headMedia]
 ### get head medias [GET]
@@ -175,4 +133,45 @@ A single Note object with all its details
           "pic": "img/experts/expert.png"
           }]
 
+# Group AboutContact
+Notes related resources of the **NIFD CMS API**
 
+## About Collection [/about/contactUs]
+
+### List All ExpertActivtiy [GET]
+
++ Response 200 (application/json)
+
+        [
+        {"id":1,
+        "department": "公关部",
+        "email":"info-cn@nifd.com",
+        "tel":"+86 4008 900 505",
+        "pic": "img/experts/expert.png"
+        },
+        {"id":1,
+        "department": "公关部",
+        "email":"info-cn@nifd.com",
+        "tel":"+86 4008 900 505",
+        "pic": "img/experts/expert.png"
+        },
+        {"id":1,
+        "department": "公关部",
+        "email":"info-cn@nifd.com",
+        "tel":"+86 4008 900 505",
+        "pic": "img/experts/expert.png"
+        },
+        {"id":1,
+        "department": "公关部",
+        "email":"info-cn@nifd.com",
+        "tel":"+86 4008 900 505",
+        "pic": "img/experts/expert.png"
+        },
+        {"id":1,
+        "department": "公关部",
+        "email":"info-cn@nifd.com",
+        "tel":"+86 4008 900 505",
+        "pic": "img/experts/expert.png"
+        }
+        ]
+        
